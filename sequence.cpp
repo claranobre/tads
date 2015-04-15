@@ -195,7 +195,9 @@ TYPE Sequence<TYPE>::get(int pos){
   return aux->data;
 }
 
-/*template <typename TYPE>
+/*
+**Search com While
+template <typename TYPE>
 int Sequence<TYPE>::search(const TYPE &elm){
   int aux.data = getSize();
     int *aux = list.next;
