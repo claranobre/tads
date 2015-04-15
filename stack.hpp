@@ -3,7 +3,6 @@
 
 #include "sequence.hpp"
 
-
 template <typename TYPE>
 class Stack {
 	Sequence<TYPE> seq;
@@ -12,12 +11,22 @@ public:
 	Stack()  {};
 	~Stack() {};
 
-	TYPE top() {}
-	TYPE push(TYPE value) {}
-	TYPE pop() {}
+	TYPE top() {
+		return seq.getFirst();
+	}
+	bool push(TYPE value) {
+		return seq.addFirst(value);
+	}
+	TYPE pop() {
+		return seq.removeFirst();
+	}
 
-	bool isEmpty() {}
-	void print()   {}
+	bool isEmpty() {
+		return seq.isEmpty();
+	}
+	void print()   {
+		seq.print();
+	}
 };
 
 #endif
